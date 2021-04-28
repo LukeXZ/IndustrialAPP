@@ -1,0 +1,35 @@
+.line {
+  height: 16rpx;
+  width: 100%;
+  margin-top: 10rpx;
+  border-radius: 8rpx;
+  background-color: black;
+}
+
+.H3{
+  font-size: larger;
+  font-weight: bold;
+}
+
+.subtitle-area {
+  width: 700rpx;
+  padding: 25rpx;
+  padding-bottom: 0rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.subtitle {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.subtitle-area-image {
+  height: 60rpx;
+  width: 60rpx;
+}

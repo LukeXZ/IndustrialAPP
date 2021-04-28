@@ -1,0 +1,8 @@
+<view class="work-order">
+  <view class="color-strip" style="background-color: {{colorArr[item.level]}};"></view>
+  <text class="H3">{{item.device}}</text>
+  <view class="work-order-info">
+    <text class="B3">风险等级：{{(item.level == 0)? "高":((item.level == 1)? "中":"低")}}</text>
+    <text class="B3">{{(item.doneTimestamp)? item.doneTimestamp:item.timestamp}}</text>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<header title="分类数据" layer="1"></header>
+
+<view class="content-sheet" style="top: {{layoutInfo.top}}px; min-height: {{layoutInfo.minHeight}};">
+  <ec-canvas class="canvas" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>

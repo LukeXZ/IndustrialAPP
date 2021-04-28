@@ -1,0 +1,47 @@
+<header id="header" title="概览"></header>
+<view class="content-sheet" style="top: {{layoutInfo.top}}px; min-height: {{layoutInfo.minHeight}};">
+  <SectionTitle text="状态"></SectionTitle>
+  <view class="operation-bar">
+    <picker mode="selector" range="{{deviceList}}" range-key="value" value="{{currentDeviceIndex}}" bindchange="changeSelection" data-id="0">
+      <view class="picker-area">
+        <text class="B2">轴承：{{deviceList[currentDeviceIndex].value}}</text>
+        <image src="/images/icons/arrow_down.png"></image>
+      </view>
+    </picker>
+    <view class="status">
+      <text class="B2 bold">准确率：</text>
+      <view class="indicator-dot" style="background: {{(accuracy > 80)? colorArr[2]:colorArr[1]}};"></view>
+      <text class="B2 bold">{{accuracy? accuracy + '%':'loading'}}</text>
+    </view>
+  </view>
+
+  <view class="meter-canvas">
+    <statusMeter class="meter" id="meter" status="{{currentStatus}}"></statusMeter>
+    <view  class="report-button" bindtap="goAddWorkOrder">生成工单</view>
+  </view>
+
+  <SectionTitle text="数据"></SectionTitle>
+  <view class="operation-bar">
+    <picker mode="selector" range="{{deviceList}}" range-key="value" value="{{currentDeviceIndex}}" bindchange="changeSelection" data-id="0">
+      <view class="picker-area">
+        <text class="B2">轴承：{{deviceList[currentDeviceIndex].value}}</text>
+        <image src="/images/icons/arrow_down.png"></image>
+      </view>
+    </picker>
+
+    <picker mode="selector" range="{{attributeList}}" range-key="name" value="{{currentAttributeIndex}}" bindchange="changeSelection" data-id="1">
+      <view class="picker-area">
+        <text class="B2">属性：{{attributeList[currentAttributeIndex].name}}</text>
+        <image src="/images/icons/arrow_down.png"></image>
+      </view>
+    </picker>
+
+    <picker wx:if="{{false}}" mode="selector" range="{{groupList}}" value="{{currentGroupIndex}}" bindchange="changeSelection" data-id="2">
+      <view class="picker-area">
+        <text class="B2">组：{{groupList[currentGroupIndex]}}</text>
+        <image src="/images/icons/arrow_down.png"></image>
+      </view>
+    </picker>
+  </view>
+  <ec-canvas class="canvas" id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view> 

@@ -1,0 +1,12 @@
+.info-area {
+  box-sizing: border-box;
+  width: 700rpx;
+  margin: 25rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 30rpx;
+  box-shadow: -2px -2px 4px #eee, 2px 2px 4px rgba(0,0,0,0.2);
+}

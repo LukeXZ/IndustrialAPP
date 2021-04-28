@@ -1,0 +1,7 @@
+<view class='progress_box'>
+    <canvas class="progress_bg" type="2d" id="canvasProgressbg"></canvas> 
+    <canvas class="progress_canvas" type="2d" id="canvasProgress"></canvas> 
+    <view class="progress-content">
+        <text class="H2" style="color: {{colorArr[status]}};">{{(status == 0)? '正常': textArr[status]}}</text>
+    </view>     
+</view>

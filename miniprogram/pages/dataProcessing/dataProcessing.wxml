@@ -1,0 +1,134 @@
+<header title="数据处理"></header>
+<view class="content-sheet" style="top: {{layoutInfo.top}}px; min-height: {{layoutInfo.minHeight}};">
+  <view class="subtitle-area">
+    <view class="subtitle">
+      <text class="H3">SMOTE预处理</text>
+      <view class="line" style="margin-left: 0rpx; background-color: #3298DB; "></view>
+    </view>
+  </view>
+
+  <form bindsubmit="submitSmote">
+    <view class="info-input-area">
+      <view class="info-input-row">
+        <text class="B2">Ratio</text>
+        <input name="ratio" value="{{inputRatio}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">KNeighbours</text>
+        <input name="KNeighbours" value="{{inputKNeighbours}}"></input>
+      </view>
+    </view>
+
+    <button class="submit-button" form-type="submit">
+      <text class="H3">提交Smote</text>
+    </button>
+  </form>
+
+  <view class="subtitle-area" wx:if="{{smoteOutput}}">
+    <view class="subtitle">
+      <text class="H3">GBDT分类算法</text>
+      <view class="line" style="margin-left: 0rpx; background-color: #3298DB; "></view>
+    </view>
+    <text data-type="GBDT" class="B2 action-text" wx:if="{{GBDTOutput}}" bindtap="showNumbers">数据</text>
+  </view>
+
+  <form bindsubmit="submitGBDT" wx:if="{{smoteOutput}}">
+    <view class="info-input-area">
+      <view class="info-input-row">
+        <text class="B2">NEstimatorss</text>
+        <input name="NEstimators" value="{{inputNEstimators}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">LearningRate</text>
+        <input name="LearningRate" value="{{inputLearningRate}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">MaxDepth</text>
+        <input name="MaxDepth" value="{{inputMaxDepth}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">MinSamplesLeaf</text>
+        <input name="MinSamplesLeaf" value="{{inputMinSamplesLeaf}}"></input>
+      </view>
+    </view>
+
+    <button class="submit-button" form-type="submit">
+      <text class="H3">提交GBDT</text>
+    </button>
+  </form>
+
+  <view class="subtitle-area" wx:if="{{GBDTOutput}}">
+    <view class="subtitle">
+      <text class="H3">SVM分类算法</text>
+      <view class="line" style="margin-left: 0rpx; background-color: #3298DB; "></view>
+    </view>
+    <text data-type="SVM" class="B2 action-text" wx:if="{{SVMOutput}}" bindtap="showNumbers">数据</text>
+    <text class="B2 action-text" wx:if="{{SVMOutput}}" bindtap="compareNumbers">对比GBDT</text>
+  </view>
+
+  <form bindsubmit="submitSVM" wx:if="{{GBDTOutput}}">
+    <view class="info-input-area">
+      <view class="info-input-row">
+        <text class="B2">Degree</text>
+        <input name="Degree" value="{{inputDegree}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">Kernel</text>
+        <input name="Kernel" value="{{inputKernel}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">Gamma</text>
+        <input name="Gamma" value="{{inputGamma}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">C</text>
+        <input name="C" value="{{inputC}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">Tol</text>
+        <input name="Tol" value="{{inputTol}}"></input>
+      </view>
+    </view>
+
+    <button class="submit-button" form-type="submit">
+      <text class="H3">提交SVM</text>
+    </button>
+  </form>
+
+  <view class="subtitle-area" wx:if="{{smoteOutput}}">
+    <view class="subtitle">
+      <text class="H3">Adaboost分类算法</text>
+      <view class="line" style="margin-left: 0rpx; background-color: #3298DB; "></view>
+    </view>
+    <text data-type="Ada" class="B2 action-text" wx:if="{{AdaOutput}}" bindtap="showNumbers">数据</text>
+  </view>
+
+  <form bindsubmit="submitAda" wx:if="{{smoteOutput}}">
+    <view class="info-input-area">
+      <view class="info-input-row">
+        <text class="B2">LearningRate</text>
+        <input name="AdaLR" value="{{inputAdaLR}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">NEstimators</text>
+        <input name="AdaNE" value="{{inputAdaNE}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">BaseEstimator</text>
+        <input name="BaseEstimator" value="{{inputBaseEstimator}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">Algorithm</text>
+        <input name="AdaAlgorithm" value="{{inputAdaAlgorithm}}"></input>
+      </view>
+      <view class="info-input-row">
+        <text class="B2">RandomState</text>
+        <input name="RandomState" value="{{inputRandomState}}"></input>
+      </view>
+    </view>
+
+    <button class="submit-button" form-type="submit">
+      <text class="H3">提交Adaboost</text>
+    </button>
+  </form>
+</view>

@@ -1,0 +1,50 @@
+@import '../../style/text.wxss';
+
+.progress_box{
+  position: relative;
+  width:220px;
+  height: 220px;  
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+.progress_bg{
+  position: absolute;
+  width:220px;
+  height: 220px; 
+}
+.progress_canvas{ 
+  width:220px;
+  height: 220px; 
+} 
+.progress_text, .progress-content{ 
+  position: absolute; 
+  display: flex;  
+  align-items: center;
+  justify-content: center
+}
+
+.logo {
+  height: 200rpx;
+  width: 200rpx;
+  box-shadow: -2px -2px 4px #eee, 2px 2px 4px rgba(0,0,0,0.2);
+  border-radius: 100rpx;
+}
+
+.progress_info{   
+  font-size: 36rpx;
+  padding-left: 16rpx;
+  letter-spacing: 2rpx
+} 
+.progress_dot{
+  width:16rpx;
+  height: 16rpx;  
+  border-radius: 50%;
+  background-color: #fb9126;
+}
+
+@media(prefers-color-scheme: dark) {
+  .logo {
+    box-shadow: -2px -2px 4px #121212, 2px 2px 4px #000000;
+  }
+}

@@ -1,0 +1,8 @@
+<header title="报表" layer="0"></header>
+<view class="content-sheet" style="top: {{layoutInfo.top}}px; min-height: {{layoutInfo.minHeight}};">
+  <SectionTitle text="日工单处理情况"></SectionTitle>
+  <ec-canvas class="canvas" id="mychart-dom-line" canvas-id="mychart-line" ec="{{ chartA }}"></ec-canvas>
+  <SectionTitle text="轴承损坏情况"></SectionTitle>
+  <ec-canvas class="canvas" id="mychart-dom-line" canvas-id="mychart-line" ec="{{ chartB }}"></ec-canvas>
+
+</view>

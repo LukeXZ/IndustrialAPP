@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/addWorkOrder/addWorkOrder",
+    "pages/dataProcessing/dataProcessing",
+    "pages/dataResult/dataResult",
+    "pages/workOrderList/workOrderList",
+    "pages/statistics/statistics",
+    "pages/workOrderDetail/workOrderDetail"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "概览",
+        "iconPath": "/images/icons/pie-chart-line.png",
+        "selectedIconPath": "/images/icons/pie-chart-fill.png"
+      },
+      {
+        "pagePath": "pages/workOrderList/workOrderList",
+        "text": "工单",
+        "iconPath": "/images/icons/task-line.png",
+        "selectedIconPath": "/images/icons/task-fill.png"
+      },
+      {
+        "pagePath": "pages/statistics/statistics",
+        "text": "报表",
+        "iconPath": "/images/icons/bar-chart-box-line.png",
+        "selectedIconPath": "/images/icons/bar-chart-box-fill.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "/images/icons/terminal-box-line.png",
+        "selectedIconPath": "/images/icons/terminal-box-fill.png"
+      }
+    ],
+    "color": "#121212",
+    "selectedColor": "#3298DB"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

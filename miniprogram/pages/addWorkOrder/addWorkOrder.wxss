@@ -1,0 +1,47 @@
+input {
+  flex: 1;
+}
+
+.pickers {
+  margin: 20rpx 25rpx 20rpx 25rpx;
+  width: 700rpx;
+  border-radius: 30rpx;
+  box-shadow: -2px -2px 4px #eee, 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.picker-area {
+  margin: 20rpx 25rpx 20rpx 25rpx;
+  padding: 20rpx 25rpx 20rpx 25rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.picker-area image {
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 20rpx;
+}
+
+.picker-area text {
+  max-width: 500rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.submit-button {
+  margin: auto;
+  margin-top: 50rpx;
+  height: 80rpx;
+  width: 320rpx;
+  border-radius: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #3298DB;
+}

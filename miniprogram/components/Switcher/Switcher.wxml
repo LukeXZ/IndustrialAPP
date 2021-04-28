@@ -1,0 +1,19 @@
+<view class="contentSwitcher" wx:if="{{mode == 'image'}}">
+  <view class="contentType-1" data-content-type="0" bindtap="selectContent">
+    <image class="contentType-image" src="{{options[0]? options[0] + color + '.png':''}}"></image>
+  </view>
+  <view class="contentType-2" data-content-type="1" bindtap="selectContent">
+    <image class="contentType-image" src="{{options[1]? options[1] + color + '.png':''}}"></image>
+  </view>
+  <view class="contentSwitcher-innerBlock" animation="{{contentSwitcherAni}}"></view>
+</view>
+
+<view class="contentSwitcher" wx:if="{{mode == 'text'}}">
+  <view class="contentType-1" data-content-type="0" bindtap="selectContent">
+    <text class="B2">{{options[0]}}</text>
+  </view>
+  <view class="contentType-2" data-content-type="1" bindtap="selectContent">
+    <text class="B2">{{options[1]}}</text>
+  </view>
+  <view class="contentSwitcher-innerBlock" animation="{{contentSwitcherAni}}"></view>
+</view>

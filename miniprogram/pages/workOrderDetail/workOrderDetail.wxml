@@ -1,0 +1,65 @@
+<header title="工单详情" layer="1"></header>
+
+<view class="content-sheet" style="top: {{layoutInfo.top}}px; min-height: {{layoutInfo.minHeight}};">
+  <SectionTitle text="异常信息"></SectionTitle>
+  <view class="info-input-area">
+    <view class="info-input-row">
+      <text class="B2">异常设备</text>
+      <text class="B2 bold">{{currentWorkOrder.device}}</text>
+    </view>
+    <view class="info-input-row">
+      <text class="B2">风险等级</text>
+      <text class="B2 bold">{{levelText[currentWorkOrder.level]}}</text>
+    </view>
+    <view class="info-input-row">
+      <text class="B2">异常描述：{{currentWorkOrder.description}}</text>
+    </view>
+    <view class="info-input-row">
+      <text class="B2">提交信息：{{currentWorkOrder.uploader}} 于 {{currentWorkOrder.timestamp}}</text>
+    </view>
+  </view>
+
+  <SectionTitle wx:if="{{!currentWorkOrder.doneTimestamp}}" text="处理工单"></SectionTitle>
+  <form wx:if="{{!currentWorkOrder.doneTimestamp}}" bindsubmit="submitForm">
+    <view class="info-input-area">
+      <view class="info-input-row">
+        <text class="B2">是否故障</text>
+        <switch name="judgement" value="{{judgement}}" bindchange="changeJudgement"></switch>
+      </view>
+
+      <view class="info-input-row">
+        <textarea name="dealDescription" maxlength="500" auto-height="true" placeholder="处理说明"></textarea>
+      </view>
+
+      <view class="info-input-row">
+        <text class="B2">处理人：</text>
+        <input class="B2" name="dealer"></input>
+      </view>
+    </view>
+    <view class="button-group">
+      <button class="button" form-type="submit">
+        <image src="/images/icons/tick.png"></image>
+      </button>
+    </view>
+  </form>
+
+  <SectionTitle wx:if="{{currentWorkOrder.doneTimestamp}}" text="处理信息"></SectionTitle>
+  <view class="info-input-area" wx:if="{{currentWorkOrder.doneTimestamp}}">
+    <view class="info-input-row">
+      <text class="B2">处理情况</text>
+      <text class="B2 bold">{{currentWorkOrder.judgement? '已处理':'无需处理'}}</text>
+    </view>
+    <view class="info-input-row">
+      <text class="B2">处理说明：{{currentWorkOrder.dealDescription}}</text>
+    </view>
+    <view class="info-input-row">
+      <text class="B2">提交信息：{{currentWorkOrder.dealer}} 于 {{currentWorkOrder.doneTimestamp}}</text>
+    </view>
+  </view>
+
+  <view class="button-group" wx:if="{{currentWorkOrder.doneTimestamp}}">
+    <button class="button" bindtap="tapButton">
+      <image src="/images/icons/cross.png"></image>
+    </button>
+  </view>
+</view>

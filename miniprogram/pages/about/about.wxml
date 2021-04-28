@@ -1,0 +1,20 @@
+<header title="关于"></header>
+<view class="content-sheet" style="top: {{layoutInfo.top}}px; min-height: {{layoutInfo.minHeight}};">
+  <SectionTitle text="开发者"></SectionTitle>
+  <view class="info-area">
+    <text class="B2">张玄 徐邦豪 鹿畅淼</text>
+    <text class="B2">No.6 组</text>
+  </view>
+
+  <SectionTitle text="外部库"></SectionTitle>
+  <view class="info-area">
+    <text class="B2">ec-chart.js</text>
+    <text class="B3">Under Apache License</text>
+  </view>
+
+  <SectionTitle text="版本号"></SectionTitle>
+  <view class="info-area">
+    <text class="B2">Version</text>
+    <text class="B2">2.0.0</text>
+  </view>
+</view>

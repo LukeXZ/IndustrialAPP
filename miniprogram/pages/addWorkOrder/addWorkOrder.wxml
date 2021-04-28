@@ -1,0 +1,39 @@
+<header title="提交工单" layer="1"></header>
+
+<view class="content-sheet" style="top: {{layoutInfo.top}}px; min-height: {{layoutInfo.minHeight}};">
+  <form class="work-order-form" bindsubmit="submit">
+    <SectionTitle text="基本信息"></SectionTitle>
+    <view class="pickers">
+      <picker mode="selector" range="{{deviceList}}" range-key="value" name="device" value="{{currentDeviceIndex}}" bindchange="changeSelection" data-id="0">
+        <view class="picker-area">
+          <text class="B2">异常轴承：{{deviceList[currentDeviceIndex].value}}</text>
+          <image src="/images/icons/arrow_down.png"></image>
+        </view>
+      </picker>
+
+      <picker mode="selector" range="{{levelList}}" range-key="name" name="level" value="{{currentLevelIndex}}" bindchange="changeSelection" data-id="1">
+        <view class="picker-area">
+          <text class="B2">风险等级：{{levelList[currentLevelIndex].name}}</text>
+          <image src="/images/icons/arrow_down.png"></image>
+        </view>
+      </picker>
+    </view>
+
+    <SectionTitle text="异常描述"></SectionTitle>
+    <view class="info-input-area">
+      <textarea class="text-margin" name="description" maxlength="500" auto-height="true" placeholder="异常描述" value="{{description? description:''}}"></textarea>
+    </view>
+
+    <SectionTitle text="提交人"></SectionTitle>
+    <view class="info-input-area">
+      <view class="info-input-row">
+        <text class="B2">签名：</text>
+        <input class="B2 bold" name="uploader" maxlength="5"></input>
+      </view>
+    </view>
+
+    <button class="submit-button" form-type="submit">
+      <text class="H3">提交工单</text>
+    </button>
+  </form>
+</view>

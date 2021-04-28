@@ -1,0 +1,5 @@
+.canvas {
+  height: 600rpx;
+  width: 710rpx;
+  margin: 40rpx 20rpx 40rpx 20rpx;
+}

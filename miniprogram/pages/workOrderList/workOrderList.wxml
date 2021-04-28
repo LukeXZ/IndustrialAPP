@@ -1,0 +1,30 @@
+<header id="header" title="工单"></header>
+
+<image class="add-button" style="top: {{layoutInfo.top}}px; right: 20rpx;" src="/images/icons/add-circle-fill.png" bindtap="addWorkOrder"></image>
+
+<view class="content-sheet" style="top: {{layoutInfo.top}}px; min-height: {{layoutInfo.minHeight}};">
+  <SectionTitle text="概览"></SectionTitle>
+  <view class="overview">
+    <text class="B2 bold">已完成工单数：{{historyList.length}}</text>
+    <text class="B2 bold">待完成工单数：{{pendingList.length}}</text>
+  </view>
+  
+  <SectionTitle text="待处理"></SectionTitle>
+  <view class="operation-bar">
+    <text class="B2 bold">排序方式</text>
+    <Switcher class="order-switcher" id="order-switcher" mode="text"></Switcher>
+  </view>
+
+  <view class="work-order-list" bindtap="tapWorkOrder">
+    <view wx:for="{{pendingList}}" wx:key="key"  data-id="{{index}}"  animation="{{pendingAni[index]}}">
+      <WorkOrder data-id="{{index}}" data-type="pending" item="{{item}}"></WorkOrder>
+    </view>
+  </view>
+
+  <SectionTitle text="历史"></SectionTitle>
+  <view class="work-order-list" bindtap="tapWorkOrder">
+    <view data-id="{{index}}" wx:for="{{historyList}}" wx:key="key" animation="{{historyAni[index]}}">
+      <WorkOrder data-id="{{index}}" data-type="history" item="{{item}}"></WorkOrder>
+    </view>
+  </view>
+</view>

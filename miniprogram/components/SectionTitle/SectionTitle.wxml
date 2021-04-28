@@ -1,0 +1,6 @@
+<view class="subtitle-area">
+  <view class="subtitle">
+    <text class="H3">{{text}}</text>
+    <view class="line" style="margin-left: 0rpx; background-color: #3298DB; "></view>
+  </view>
+</view>

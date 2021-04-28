@@ -1,0 +1,9 @@
+<view class="header" style="{{'padding-top: ' + paddingTop + 'px;' + 'background-color: ' + bgColor + ';'}}">
+  <view class="title">
+    <image wx:if="{{layer}}" class="title-back-image" src="/images/icons/back.png" bindtap="tapBack"></image>
+    <text class="H1 title-text">{{title}}</text>
+    <Loading wx:if="{{loading}}"></Loading>
+  </view>
+</view>
+
+<view class="safe-area"></view>

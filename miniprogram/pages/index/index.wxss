@@ -1,0 +1,32 @@
+.status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.indicator-dot {
+  margin: 10rpx;
+  height: 20rpx;
+  width: 20rpx;
+  border-radius: 10rpx;
+}
+
+.meter-canvas {
+  margin-top: 30rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.report-button {
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+  background-color: #3298DB;
+  color: white;
+  text-align: center;
+  line-height: 80rpx;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+.add-button {
+  height: 60rpx;
+  width: 60rpx;
+  
+  position: absolute;
+  transform: translateY(-120%);
+}
+
+.work-order-list {
+  padding: 20rpx;
+  width: 710rpx;
+}

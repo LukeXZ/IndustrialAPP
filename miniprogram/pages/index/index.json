@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "ec-canvas": "/components/ec-canvas/ec-canvas",
+    "header": "/components/header/header",
+    "SectionTitle": "/components/SectionTitle/SectionTitle",
+    "statusMeter": "/components/statusMeter/statusMeter"
+  }
+}

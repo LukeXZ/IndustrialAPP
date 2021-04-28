@@ -1,0 +1,32 @@
+input {
+  flex: 1;
+}
+
+.button-group {
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  width: 650rpx;
+  min-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50rpx;
+  background: #3298DB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button image {
+  height: 80rpx;
+  width: 80rpx;
+}
